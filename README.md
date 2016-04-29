@@ -13,14 +13,6 @@ Project is hosted at: #
 2. MySQL
 3. UTHM Student Management System -- [simple-smp](http://github.com/Zyten/simple-smp "simple-smp by Zyten")
 
-### Contribute
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
-
 ### Project Members
 
 1. [@Zyten](http://github.com/Zyten "Ruban Selvarajah") -- Ruban Selvarajah
