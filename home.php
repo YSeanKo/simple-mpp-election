@@ -22,7 +22,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistem Pencalonan MPP ILP Ledang</title>
+    <title>Sistem Pencalonan MPP UTHM</title>
     <meta name="description" content="Sistem Pencalonan MPP ILP Ledang">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -63,7 +63,7 @@
 <body>
     <div id="header" class="text-center">
         <h1>Pencalonan Majlis Perwakilan Pelajar</h1>
-        <h3>ILP Ledang Bestari Dalam Taman</h3>
+        <h3>Universiti Tun Hussein Onn Malaysia</h3>
     </div>
 
     <div class="title">

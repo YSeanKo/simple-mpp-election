@@ -9,11 +9,11 @@
 	// MySQL injection protections
 	$myusername = mysqli_real_escape_string($conn, $myusername);
 	$mypassword = mysqli_real_escape_string($conn, $mypassword);
-	//$encrypted_mypassword=md5($mypassword); //MD5 Hash for security
+	$encrypted_mypassword=md5($mypassword); //MD5 Hash for security
 	$tbl_name="jpentadbir"; // Table name
 
 	//Query data for login
-	$sql="SELECT * FROM $tbl_name WHERE no_staf='$myusername' AND kata_laluan='$mypassword'" or die(mysqli_error());
+	$sql="SELECT * FROM $tbl_name WHERE no_staf='$myusername' AND kata_laluan='$encrypted_mypassword'" or die(mysqli_error());
 	$result=mysqli_query($conn, $sql) or die(mysqli_error());
 
 	// Checking results rows

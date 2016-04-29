@@ -39,7 +39,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistem Pencalonan MPP ILP Ledang</title>
+    <title>Sistem Pencalonan MPP UTHM</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -76,7 +76,7 @@
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="home.php" class="site_title"> <span>ILP LEDANG</span></a>
+                        <a href="home.php" class="site_title"> <span>UTHM</span></a>
                     </div>
                     <div class="clearfix"></div>
 
@@ -93,9 +93,6 @@
                             <ul class="nav side-menu">
                                 <li>
 									<a  href="home.php"><i class="fa fa-home"></i> Utama</a>
-                                </li>
-								<li>
-									<a  href="urus-batch.php"><i class="fa fa-user"></i> Urus Pelajar</span></a>
                                 </li>
                                 <li>
 									<a  href="urus-calon.php"><i class="fa fa-user"></i> Urus Calon</span></a>
@@ -191,7 +188,7 @@
                                 <div class="bs-example" data-example-id="simple-jumbotron">
                                     <div class="jumbotron">
                                         <h1>Laman Pentadbir</h1>
-                                        <p style="font-size:24px;">Sistem Pencalonan MPP ILP Ledang</p>
+                                        <p style="font-size:24px;">Sistem Pencalonan MPP UTHM</p>
                                     </div>
                                 </div>
                             </div>
@@ -203,12 +200,12 @@
 
                 <footer>
                     <div class="">
-						<p class="text-center"> Penafian: Institut Latihan Perindustrian Ledang (ILP Ledang) 
+						<p class="text-center"> Penafian: Universiti Tun Hussein Onn Malaysia (UTHM) 
 						adalah tidak bertanggungjawab bagi apa-apa kehilangan atau kerugian yang disebabkan oleh penggunaan mana-mana 
 						maklumat yang diperolehi dari sistem ini.
 						</p>
                         <p class="pull-right"> Hakcipta Terpelihara © 2016 |
-                            <span class="lead"> <i class="fa fa-paw"></i> <a href="http://www.ilpledang.gov.my/v5/index.php/en/">ILP LEDANG</a></span>
+                            <span class="lead"> <i class="fa fa-paw"></i> <a href="http://www.uthm.edu.my/v2/">UTHM</a></span>
                         </p>
                     </div>
                     <div class="clearfix"></div>

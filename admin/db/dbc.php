@@ -3,7 +3,7 @@
 $host="localhost"; // Host name
 $username="root"; // Database username
 $password=""; // Database password
-$db_name="ilp_mpp"; // Database name
+$db_name="uthm_mpp"; // Database name
 
 // Create connection
 $conn = new mysqli($host, $username, $password);

@@ -9,7 +9,9 @@
 	// MySQL injection protections - \n, \r, \, ', " etc
 	$myusername = mysqli_real_escape_string($conn, $myusername);
 	$mypassword = mysqli_real_escape_string($conn, $mypassword);
-	//$encrypted_mypassword=md5($mypassword); //MD5 Hash for security
+	//$mypassword = strtoupper($mypassword);
+	//TODO: allow case insensitive username
+	$encrypted_mypassword=md5($mypassword); //MD5 Hash for security
 	$tbl_name="jpelajar"; // Table name
 
 	//Query status_pengundian
@@ -26,7 +28,7 @@
 	}
 
 	//Query data for login
-	$sql="SELECT * FROM $tbl_name WHERE no_matrik='$myusername' and kata_laluan='$mypassword'" or die(mysql_error());
+	$sql="SELECT * FROM $tbl_name WHERE no_matrik='$myusername' and kata_laluan='$encrypted_mypassword'" or die(mysql_error());
 	$result=mysqli_query($conn, $sql) or die(mysqli_error());
 
 	// Checking result rows
