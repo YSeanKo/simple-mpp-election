@@ -5,13 +5,13 @@
 
 A group project for Software Engineering Security subject. 
 
-Project is hosted at 
-*placeholder*
+Project is hosted at: #
 
 ### Requirements
 
 1. PHP
 2. MySQL
+3. UTHM Student Management System -- [simple-smp](http://github.com/Zyten/simple-smp "simple-smp by Zyten")
 
 ### Contribute
 
