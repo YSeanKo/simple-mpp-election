@@ -194,7 +194,7 @@
 										<div class="form-group">
                                             <label class="control-label col-md-4 col-sm-3 col-xs-12">ID Staf</label>
                                             <div class="col-md-6 col-sm-9 col-xs-12">
-                                                <input required type="text" name="no_staf" class="form-control" placeholder="">
+                                                <input required type="text" name="no_staf" class="form-control" placeholder="" pattern="[0-9]{5}" maxlength="5" title="Sila masukkan 5 digit nombor sahaja.">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -206,7 +206,7 @@
 										<div class="form-group">
                                             <label class="control-label col-md-4 col-sm-3 col-xs-12">No. K/P</label>
                                             <div class="col-md-6 col-sm-9 col-xs-12">
-                                                <input required type="text" pattern="\d*" maxlength="12" placeholder="cth. 951216085565" name="no_kp" class="form-control" placeholder="">
+                                                <input required type="text" pattern="\d*" maxlength="12" placeholder="cth. 951216085565" name="no_kp" class="form-control" placeholder="" pattern="[0-9]{12}" maxlength="12" title="Sila masukkan 12 digit nombor sahaja.">
                                             </div>
                                         </div>
 										<div class="form-group">
@@ -226,6 +226,7 @@
 										<div class="form-errors">
 											<?php foreach($_SESSION['addnew_errors'] as $error): ?>
 												<p><?php echo $error ?></p>
+												<!--TODO: Color code success/ralat -->
 											<?php endforeach; ?>
 										</div>
 										<?php unset($_SESSION['addnew_errors']); endif;?>

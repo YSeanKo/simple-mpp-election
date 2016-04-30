@@ -8,10 +8,9 @@
 	
 	// MySQL injection protections - \n, \r, \, ', " etc
 	$myusername = mysqli_real_escape_string($conn, $myusername);
-	$mypassword = mysqli_real_escape_string($conn, $mypassword);
-	//$mypassword = strtoupper($mypassword);
+	//$mypassword = mysqli_real_escape_string($conn, $mypassword);
 	//TODO: allow case insensitive username
-	$encrypted_mypassword=md5($mypassword); //MD5 Hash for security
+	
 	$tbl_name="jpelajar"; // Table name
 
 	//Query status_pengundian
@@ -28,18 +27,14 @@
 	}
 
 	//Query data for login
-	$sql="SELECT * FROM $tbl_name WHERE no_matrik='$myusername' and kata_laluan='$encrypted_mypassword'" or die(mysql_error());
+	$sql="SELECT id, no_matrik, kata_laluan, status_undi FROM uthm_smp.jpelajar WHERE no_matrik='$myusername'" or die(mysql_error());
 	$result=mysqli_query($conn, $sql) or die(mysqli_error());
+	$user = mysqli_fetch_assoc($result);
+	
+	if(password_verify($mypassword, $user['kata_laluan'])){		
 
-	// Checking result rows
-	$count=mysqli_num_rows($result);
-	// If username and password is a match, the count will be 1
-
-	if($count==1){		
-		$user = mysqli_fetch_assoc($result);
-
-		if($user['status_undi'] == 1)
-		{
+		if($user['status_undi'] == 1){
+			
 			$_SESSION['errors'] = array("&nbsp;&nbsp;Akaun mempunyai status sudah mengundi.");
 			header("location:index.php");	
 			exit();
@@ -49,7 +44,6 @@
 			header("location:home.php");	
 			exit();
 		}
-
 	}
 	//If the username or password is wrong, you will receive this message below.
 	else {

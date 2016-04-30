@@ -11,7 +11,7 @@
 
 <?php 
 	$result = mysqli_query($conn, "SELECT jc.id as id_calon, jp.nama_penuh, jp.no_matrik, jp.no_kp, jk.nama_penuh as nama_kursus, js.nama as batch
-			  FROM jcalon jc, jpelajar jp, jkursus jk, jsesi js WHERE jc.id_pelajar=jp.id AND jp.id_kursus=jk.id AND jp.id_sesi = js.id"); 
+			  FROM jcalon jc, uthm_smp.jpelajar jp, uthm_smp.jkursus jk, uthm_smp.jsesi js WHERE jc.id_pelajar=jp.id AND jp.id_kursus=jk.id AND jp.id_sesi = js.id"); 
 			  
 	$_SESSION['jum_calon'] = mysqli_num_rows($result);
 ?>
@@ -156,7 +156,7 @@
                                             <div class="col-sm-9">
 												 
                                                 <div class="input-group">
-                                                    <input type="text" name="key" placeholder="No. Kad Pelajar" autofocus class="form-control">
+                                                    <input type="text" name="key" minlength="8" maxlength="8" placeholder="No. Kad Pelajar" autofocus class="form-control" required>
                                                     <span class="input-group-btn">
 														<input type="submit" value="Cari!" name="submit" class="btn btn-primary"> 
 													</span>

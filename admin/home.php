@@ -9,13 +9,14 @@
 
 <?php 
 	//Query calon
-	$result = mysqli_query($conn, "SELECT jc.id, jp.nama_penuh FROM jcalon jc, jpelajar jp WHERE jc.id_pelajar=jp.id")
+	$result = mysqli_query($conn, "SELECT jc.id, jp.nama_penuh FROM jcalon jc, uthm_smp.jpelajar jp WHERE jc.id_pelajar=jp.id")
+	//or die(mysqli_error($conn));
 	or die(" Tiada calon ditemui\n"); 
 	//Query pelajar
-	$result_pelajar = mysqli_query($conn, "SELECT jp.id FROM jpelajar jp")
+	$result_pelajar = mysqli_query($conn, "SELECT jp.id FROM uthm_smp.jpelajar jp")
 	or die(" Tiada pelajar ditemui\n"); 
 	//Query jumlah pelajar sudah undi
-	$result_sudah_undi = mysqli_query($conn, "SELECT jp.id FROM jpelajar jp WHERE jp.status_undi=1")
+	$result_sudah_undi = mysqli_query($conn, "SELECT jp.id FROM uthm_smp.jpelajar jp WHERE jp.status_undi=1")
 	or die(" Tiada pengundi ditemui\n");
 	//Query jumlah undi bagi semua calon
 	$result_jum_undi = mysqli_query($conn, "SELECT SUM(jc.jumlah_undi) as total FROM jcalon jc")

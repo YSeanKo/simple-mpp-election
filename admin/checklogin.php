@@ -8,20 +8,14 @@
 	
 	// MySQL injection protections
 	$myusername = mysqli_real_escape_string($conn, $myusername);
-	$mypassword = mysqli_real_escape_string($conn, $mypassword);
-	$encrypted_mypassword=md5($mypassword); //MD5 Hash for security
-	$tbl_name="jpentadbir"; // Table name
+	//$mypassword = mysqli_real_escape_string($conn, $mypassword);
 
 	//Query data for login
-	$sql="SELECT * FROM $tbl_name WHERE no_staf='$myusername' AND kata_laluan='$encrypted_mypassword'" or die(mysqli_error());
+	$sql="SELECT id, no_staf, nama_penuh, no_kp, kata_laluan FROM jpentadbir WHERE no_staf='$myusername'" or die(mysql_error());
 	$result=mysqli_query($conn, $sql) or die(mysqli_error());
+	$user = mysqli_fetch_assoc($result);
 
-	// Checking results rows
-	$count=mysqli_num_rows($result);
-	// If username and password is a match, the count will be 1
-
-	if($count==1){
-		$user = mysqli_fetch_assoc($result);
+	if(password_verify($mypassword, $user['kata_laluan'])){
 		$_SESSION['id_pentadbir'] = $user['id'];
 		$_SESSION['no_staf'] 	  = $user['no_staf'];
 		$_SESSION['nama_penuh']   = $user['nama_penuh'];

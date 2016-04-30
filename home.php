@@ -9,8 +9,12 @@
 
 <?php 
     //Query data for calon
-	$result = mysqli_query($conn, "SELECT jc.id, jp.nama_penuh, jp.no_matrik FROM jcalon jc, jpelajar jp WHERE jc.id_pelajar=jp.id")
-	or die(" Tiada calon ditemui\n"); 
+	
+	$result = mysqli_query($conn, "SELECT jc.id, jp.nama_penuh, jp.no_matrik 
+	FROM jcalon jc, uthm_smp.jpelajar jp
+    WHERE jc.id_pelajar=jp.id")
+	or (mysqli_error($conn));
+	//or die(" Tiada calon ditemui\n"); 
 
 	$_SESSION['jum_calon'] = mysqli_num_rows($result);
 ?>
@@ -67,8 +71,7 @@
     </div>
 
     <div class="title">
-        <center><h2>Calon</h2></center><br><br>
-		
+        <center><h2>Calon</h2></center>
     </div>
 
     <div class="container"> <!-- Container -->  
@@ -82,9 +85,9 @@
 					while ($row=mysqli_fetch_array($result)){
 						echo '<div class="col-md-3 col-sm-3 col-lg-3">';
 						echo "   <div class='t-style2' id='calon-".$temp."'>";
-						echo "       <img src='img/pelajar/".$row['no_matrik'].".jpg' class='img-responsive' alt='".$row['no_matrik']."'>";
-						echo "       <h4>".$row['nama_penuh']."</h4>";
-						echo "      <div class='t-social2' id='scalon-".$temp."'>";
+						echo "       <img src='http://localhost:81/simple-smp/img/pelajar/".$row['no_matrik'].".jpg' class='img-responsive' alt='".$row['no_matrik']."'>";
+						echo "       <h4 class='text-center'>".$row['nama_penuh']."</h4>";
+						echo "      <div class='t-social2 text-center' id='scalon-".$temp."'>";
 						echo '           <a href="#"><label style="color:#FFF; font-weight:800;">PILIH</label></a>';
 						echo '       </div>';
 						echo "       <input style='opacity:0;position:absolute;top: -9999px;left: -9999px;' class='calon-checkbox' type='checkbox' value='".$row['id']."' name='voted[]' />";

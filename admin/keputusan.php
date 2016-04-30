@@ -9,7 +9,7 @@
 
 <?php 
 	//Query calon
-	$result = mysqli_query($conn, "SELECT jc.jumlah_undi, jp.nama_penuh FROM jcalon jc, jpelajar jp WHERE jc.id_pelajar=jp.id")
+	$result = mysqli_query($conn, "SELECT jc.jumlah_undi, jp.nama_penuh FROM jcalon jc, uthm_smp.jpelajar jp WHERE jc.id_pelajar=jp.id")
 	or die(" Tiada calon ditemui\n"); 
 	 
 	//Query jumlah undi

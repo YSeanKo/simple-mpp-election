@@ -9,7 +9,7 @@
 	    $_SESSION['qno_kp'] 	 = NULL;
 	    $_SESSION['qjabatan']    = NULL;
         //Query pelajar based on searched matric number
-		$query=mysqli_query($conn, "SELECT jp.id, jp.nama_penuh, jp.no_kp, jk.singkatan FROM jpelajar jp, jkursus jk WHERE no_matrik='$key' AND jp.id_kursus = jk.id");
+		$query=mysqli_query($conn, "SELECT jp.id, jp.nama_penuh, jp.no_kp, jk.singkatan FROM uthm_smp.jpelajar jp, uthm_smp.jkursus jk WHERE no_matrik='$key' AND jp.id_kursus = jk.id");
 		
 		$count=mysqli_num_rows($query); //If found, num rows will be 1
 		

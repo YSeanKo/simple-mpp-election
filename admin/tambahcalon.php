@@ -12,7 +12,7 @@
 		}
 		
 		else{
-			$query=mysqli_query($conn, "SELECT jp.id FROM jpelajar jp WHERE jp.id='$key'");	
+			$query=mysqli_query($conn, "SELECT jp.id FROM uthm_smp.jpelajar jp WHERE jp.id='$key'");	
 		
 			if(mysqli_num_rows($query) == 1) { //Record exists in jpelajar
 				while($row=mysqli_fetch_array($query))

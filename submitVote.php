@@ -24,7 +24,7 @@
 	}
 	//Query update status_undi for logged in user
 	$id_pengguna = $_SESSION['id_pengguna'];
-	mysqli_query($conn, "UPDATE jpelajar SET status_undi=1 WHERE id='$id_pengguna'");
+	mysqli_query($conn, "UPDATE uthm_smp.jpelajar SET status_undi=1 WHERE id='$id_pengguna'");
 
 	header("Location: success.php", true, 301);
 	exit();

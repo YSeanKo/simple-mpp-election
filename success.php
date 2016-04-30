@@ -64,7 +64,7 @@
 		<div class="row">
 			<div class="col-md-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-8 col-sm-8 col-lg-8">
 				<br><br><br><br><br>
-				<h4>Pengundian telah berjaya.</h4><h4>Anda akan dilog keluar secara automatik sebentar lagi.</h4>
+				<h4 class="text-center">Pengundian telah berjaya.</h4><br><h4 class="text-center">Anda akan dilog keluar secara automatik sebentar lagi.</h4>
 			</div>
 		</div> 
     </div> <!-- End Container -->
