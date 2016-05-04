@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2016 at 01:32 AM
+-- Generation Time: May 04, 2016 at 02:46 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -37,16 +37,14 @@ CREATE TABLE IF NOT EXISTS `jcalon` (
 --
 
 INSERT INTO `jcalon` (`id`, `id_pelajar`, `jumlah_undi`) VALUES
-(46, 1, 0),
-(47, 10, 0),
-(48, 3, 0),
-(49, 5, 0),
-(50, 8, 0),
-(51, 15, 0),
-(52, 17, 0),
-(53, 20, 0),
-(54, 13, 0),
-(55, 14, 0),
+(46, 1, 4),
+(47, 10, 4),
+(48, 3, 3),
+(49, 5, 2),
+(50, 8, 2),
+(51, 15, 3),
+(52, 17, 3),
+(53, 20, 3),
 (56, 37, 0);
 
 -- --------------------------------------------------------
@@ -79,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `jpentadbir` (
   `nama_penuh` varchar(255) NOT NULL,
   `no_kp` varchar(12) NOT NULL,
   `kata_laluan` varchar(60) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `jpentadbir`
@@ -155,7 +153,7 @@ ALTER TABLE `jcalon`
 -- AUTO_INCREMENT for table `jpentadbir`
 --
 ALTER TABLE `jpentadbir`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `jsesi`
 --
