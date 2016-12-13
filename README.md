@@ -5,7 +5,7 @@
 
 A group project for Software Engineering Security subject. 
 
-Project is hosted at: #
+Project is hosted at: http://www.seanko.com/
 
 ### Requirements
 
