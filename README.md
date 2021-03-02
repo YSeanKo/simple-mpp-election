@@ -5,8 +5,6 @@
 
 A group project for Software Engineering Security subject. 
 
-Project is hosted at: http://www.seanko.com/
-
 ### Requirements
 
 1. PHP
